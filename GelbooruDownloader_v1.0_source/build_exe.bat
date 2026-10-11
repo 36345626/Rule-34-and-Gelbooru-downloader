@@ -1,0 +1,21 @@
+@echo off
+setlocal
+chcp 65001 >nul
+cd /d "%~dp0"
+where py >nul 2>nul && (set "PY=py") || (set "PY=python")
+echo Устанавливаю нужные библиотеки...
+%PY% -m pip install --upgrade pip
+%PY% -m pip install PySide6-Essentials PySide6-WebEngine requests PySocks pyinstaller
+if errorlevel 1 goto error
+echo Собираю GelbooruDownloader.exe...
+%PY% "GelbooruDownloader.py" --build %*
+if errorlevel 1 goto error
+echo.
+if /i "%~1"=="--folder" (echo Готово: папка GelbooruDownloader\ рядом с этим файлом.) else (echo Готово: GelbooruDownloader.exe рядом с этим файлом.)
+pause
+exit /b 0
+:error
+echo.
+echo Сборка не удалась — смотрите сообщения выше.
+pause
+exit /b 1
