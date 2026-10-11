@@ -7,7 +7,7 @@ Two versions of the software are provided: Lite and Full. The difference is that
 
 To use the programs, you need an account, as the software utilizes your account's API to interact with the site on your behalf. PLEASE NOTE: YOU ARE SOLELY RESPONSIBLE FOR ANY ACTIONS TAKEN ON THE SITE; THIS PROGRAM IS MERELY A CONVENIENT TOOL.
 
-=====================================================================================
+========================================================================
 
 Это не первая версия, но на данный момент самая полная. Она включает в себя весь функционал для поиска и скачивания постов с Rule34 и Gelbooru. В программе есть встроенный прокси на случай, если обычный доступ ограничен. Она была создана с помощью «вайб-кодинга» (vibecoding) при поддержке ChatGPT и Claude Code.
 
